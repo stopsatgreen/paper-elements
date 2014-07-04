@@ -1,0 +1,20 @@
+{
+  "name": "paper-elements",
+  "version": "0.0.0",
+  "authors": [
+    "Peter Gasston <peter@rehabstudio.com>"
+  ],
+  "description": "Paper Elements",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "paper-elements": "Polymer/paper-elements#~0.3.3"
+  }
+}
