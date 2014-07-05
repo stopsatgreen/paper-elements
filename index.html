@@ -10,7 +10,12 @@
     <link rel="import" href="bower_components/core-menu/core-menu.html">
     <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
     <link rel="import" href="bower_components/core-selector/core-selector.html">
+    <link rel="import" href="bower_components/paper-focusable/paper-focusable.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
+    <link rel="import" href="bower_components/paper-menu-button/paper-menu-button-overlay.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
     <style>
     body {
       color: #000;
@@ -18,19 +23,41 @@
       margin: 0;
     }
     paper-item.core-selected { font-weight: bold; }
+    paper-tab { background-color: orange; }
+    body /deep/ core-icon {
+      fill: #fff;
+    }
+    paper-menu-button, div[tool] span[flex] {
+      vertical-align: middle;
+    }
+    paper-menu-button paper-item { color: black; }
     </style>
   </head>
   <body>
   <core-scaffold>
     <core-header-panel navigation flex mode="seamed">
       <core-toolbar>Application</core-toolbar>
-      <core-menu selected="0" theme="core-light-theme" on-core-select="{{selectAction}}" name="hello-mum">
-        <paper-item icon="settings" label="item1"></paper-item>
-        <paper-item icon="settings" label="item2"></paper-item>
+      <core-menu selected="0" theme="core-light-theme">
+        <paper-item icon="settings">item1</paper-item>
+        <paper-item icon="settings">item2</paper-item>
       </core-menu>
     </core-header-panel>
-    <div tool>Title</div>
-    <div>Content goes here...</div>
+    <div tool>
+      <paper-menu-button icon="menu" flex>
+        <paper-item>Menu Item 1</paper-item>
+        <paper-item>Menu Item 2</paper-item>
+        <paper-item>Menu Item 3</paper-item>
+      </paper-menu-button>
+      <span flex>Title</span>
+    </div>
+    <div>
+      <paper-tabs selected="0">
+        <paper-tab>TAB 1</paper-tab>
+        <paper-tab>TAB 2</paper-tab>
+        <paper-tab>TAB 3</paper-tab>
+      </paper-tabs>
+      <p>Content goes here...</p>
+    </div>
   </core-scaffold>
   <script>
   // Wait for 'polymer-ready'. Ensures the element is upgraded.
