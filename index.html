@@ -4,28 +4,29 @@
     <title></title>
     <script src="bower_components/platform/platform.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="bower_components/core-icons/core-icons.html">
-    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/core-item/core-item.html">
+    <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
     <style>
     body {
-      color: #fff;
+      color: #000;
       font-family: Roboto, sans-serif;
       margin: 0;
     }
-    .body-panel { margin: 1em; }
-    paper-input { width: 100%; }
     </style>
   </head>
   <body>
-    <core-toolbar style="background-color: #666">
-      <paper-icon-button icon="menu" style="fill: white"></paper-icon-button>
-      <span flex>Hello Moto</span>
-      <paper-icon-button icon="more-vert" style="fill: white"></paper-icon-button>
-    </core-toolbar>
-    <div class="body-panel">
-      <paper-input label="Enter something then" rows="3" multiline></paper-input>
-    </div>
+  <core-scaffold>
+    <core-header-panel navigation flex mode="seamed">
+      <core-toolbar>Application</core-toolbar>
+      <core-menu theme="core-light-theme">
+        <paper-item icon="settings" label="item1"></paper-item>
+        <paper-item icon="settings" label="item2"></paper-item>
+      </core-menu>
+    </core-header-panel>
+    <div tool>Title</div>
+    <div>Content goes here...</div>
+  </core-scaffold>
   </body>
 </html>
